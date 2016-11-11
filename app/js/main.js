@@ -69,4 +69,64 @@ $(document).ready(function(){
     $(document).scrollTop(historiaPositionTop)
   })
 
+  // FORM COLLECT DATA
+
+    $('#select-rrhh').click(function(){
+      $('#input-contacto').html('R.R.H.H')
+    })
+
+    $('#select-ventas').click(function(){
+      $('#input-contacto').html('Ventas')
+    })
+
+    $('#select-informes').click(function(){
+      $('#input-contacto').html('Informes')
+    })
+
+    $('#select-internet').click(function(){
+      $('#dropdown-conocio').html('Internet')
+    })
+
+    $('#select-viaPublica').click(function(){
+      $('#dropdown-conocio').html('Vía Pública')
+    })
+
+    $('#select-recomendacionPersonal').click(function(){
+      $('#dropdown-conocio').html('Recomendación Personal')
+    })
+
+    function collectData() {
+      let nombre = $('#input-nombre').val();
+      let email = $('#input-email').val();
+      let telefono = $('#input-telefono').val();
+      let direccion = $('#input-direccion').val();
+      let pais = $('#input-pais').val();
+      let provincia = $('#input-provincia').val();
+      let ciudad = $('#input-ciudad').val();
+      let comoNosConocio = $('#dropdown-conocio').html();
+      let destinatario = $('#input-contacto').html();
+      let mensaje = $('#input-consulta').val();
+
+      let datos = {
+      'nombreYApellido': nombre,
+      'email': email,
+      'telefono': telefono,
+      'direccion': direccion,
+      'pais': pais,
+      'provincia': provincia,
+      'ciudad': ciudad,
+      'comoNosConocio': comoNosConocio,
+      'destinatario': destinatario,
+      'mensaje': mensaje
+      }
+
+      $('#col-consulta').append( "<div class='alert alert-success alerta-consulta' role='alert'> <strong> ¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
+
+      console.log(datos)
+    }
+
+    $('#submit-button').click(function(){
+      collectData();
+    })
+
 });

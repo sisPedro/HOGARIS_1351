@@ -24,6 +24,7 @@ html(lang="en")
     .container-fluid
       .row#main-wrapper
         .col-md-10.col-md-offset-1.col-sm-12#main-col
+          //- HEADER
           header#header
             .row
               .col-md-12#top-header
@@ -51,6 +52,7 @@ html(lang="en")
                       a(href="#serv-tec") Servicio Técnico
           main#main
             .container-fluid
+              //- DAMERO
               .row#tile-row
                 .col-md-12.col-xs-12#tile-box
                   .tile.lt#r1t1
@@ -81,6 +83,7 @@ html(lang="en")
                     Los equipos Hogaris son diseñados y fabricados con componentes adecuados para su óptima durabilidad, siendo aptos tanto para el uso doméstico como gastronómico.
                   p.
                     Todos los productos son innovaciones pensadas para aportar soluciones a la cocina modera. Con presencia comercial a través de distribuidores en todo el país, los equipos cuentan con servicio técnico de asistencia integral.
+              //- PRODUCTOS
               .row.product-row#row-productos
                 .col-md-3.col-sm-3#productos
                   span#title Productos
@@ -313,30 +316,31 @@ html(lang="en")
                       input#input-email.form-control(type='text', placeholder='E-mail')
                       input#input-telefono.form-control(type='text', placeholder='Teléfono')
                       input#input-direccion.form-control(type='text', placeholder='Dirección')
-                      .btn-group
-                        button.btn.btn-default.dropdown-toggle#input-pais(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Seleccione el país
-                          span.caret
-                        ul.dropdown-menu#dropdown-pais
+                      input#input-pais.form-control(type='text', placeholder='País')
+                      input#input-provincia.form-control(type='text', placeholder='Provincia')
+                      input#input-ciudad.form-control(type='text', placeholder='Ciudad')
+                      .dropdown
+                        button.btn.btn-default.dropdown-toggle#dropdown-conocio(type='button',data-toggle="dropdown", aria-haspopup="true", aria-expanded="true") ¿Cómo nos conoció?
+                          span.glyphicon.glyphicon-menu-down
+                        ul.dropdown-menu(aria-labelledby="#dropdown-conocio")
                           li
-                            a(href="#") Argentina
+                            a#select-internet Internet
                           li
-                            a(href="#") Uruguay
+                            a#select-viaPublica Vía pública
                           li
-                            a(href='#') Brasil
-                      .btn-group
-                        button.btn.btn-default.dropdown-toggle#input-provincia(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Seleccione la provincia
-                          span.caret
-                      .btn-group
-                        button.btn.btn-default.dropdown-toggle#input-ciudad(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Seleccione la ciudad
-                          span.caret
-                      .btn-group
-                        button.btn.btn-default.dropdown-toggle#input-conocio(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') ¿Cómo nos conoció?
-                          span.caret
-                    .col-md-6
+                            a#select-recomendacionPersonal Recomendación personal
+                    .col-md-6#col-consulta
                       span#consulta-a Consulta dirigida a:
                       .btn-group
-                        button.btn.btn-default.dropdown-toggle#input-consulta-a(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Contacto
-                          span.caret
+                        button.btn.btn-default.dropdown-toggle#input-contacto(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Contacto
+                          span.glyphicon.glyphicon-menu-down
+                        ul.dropdown-menu(aria-labelledby="#dropdown-contacto")
+                          li
+                            a#select-rrhh R.R.H.H.
+                          li
+                            a#select-ventas Ventas
+                          li
+                            a#select-informes Informes
                       textarea#input-consulta.input-sm.form-control(type='text')
                   .row.submit-form
                     .col-md-8.col-md-offset-4
@@ -345,12 +349,12 @@ html(lang="en")
               .row.serviciotecnico-row
                 .col-md-3.col-sm-3#serv-tec
                   span#title Servicio Técnico
-                .col-md-5.col-sm-5#paragraph-col
+                .col-md-4.col-sm-4#paragraph-col
                   p serviciotecnico@hogaris.com.ar
                   p administracion@hogarios.com.ar
                   p (+5411) 4755-8410 / 4713-7321
                   p info@hogaris.com.ar
-                .col-md-4.col-sm-4
+                .col-md-5.col-sm-5
                   p Máquina para elaborar pastas PASTAHOGAR
                   p Fabrica y garantiza: HOGARIS NOVA S.A.
                   p Carlos Gardel 2554, Villa Libertad, San Martín
@@ -358,6 +362,7 @@ html(lang="en")
               .row.contact-separator
                 .col-md-9.col-md-offset-3
                   .separator#footer-separator
+              //- FOOTER
     footer#footer
       .container-fluid
         .row

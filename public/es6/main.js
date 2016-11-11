@@ -68,4 +68,64 @@ $(document).ready(function () {
   $('#menu-historia').click(function () {
     $(document).scrollTop(historiaPositionTop);
   });
+
+  // FORM COLLECT DATA
+
+  $('#select-rrhh').click(function () {
+    $('#input-contacto').html('R.R.H.H');
+  });
+
+  $('#select-ventas').click(function () {
+    $('#input-contacto').html('Ventas');
+  });
+
+  $('#select-informes').click(function () {
+    $('#input-contacto').html('Informes');
+  });
+
+  $('#select-internet').click(function () {
+    $('#dropdown-conocio').html('Internet');
+  });
+
+  $('#select-viaPublica').click(function () {
+    $('#dropdown-conocio').html('Vía Pública');
+  });
+
+  $('#select-recomendacionPersonal').click(function () {
+    $('#dropdown-conocio').html('Recomendación Personal');
+  });
+
+  function collectData() {
+    var nombre = $('#input-nombre').val();
+    var email = $('#input-email').val();
+    var telefono = $('#input-telefono').val();
+    var direccion = $('#input-direccion').val();
+    var pais = $('#input-pais').val();
+    var provincia = $('#input-provincia').val();
+    var ciudad = $('#input-ciudad').val();
+    var comoNosConocio = $('#dropdown-conocio').html();
+    var destinatario = $('#input-contacto').html();
+    var mensaje = $('#input-consulta').val();
+
+    var datos = {
+      'nombreYApellido': nombre,
+      'email': email,
+      'telefono': telefono,
+      'direccion': direccion,
+      'pais': pais,
+      'provincia': provincia,
+      'ciudad': ciudad,
+      'comoNosConocio': comoNosConocio,
+      'destinatario': destinatario,
+      'mensaje': mensaje
+    };
+
+    $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> ¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
+
+    console.log(datos);
+  }
+
+  $('#submit-button').click(function () {
+    collectData();
+  });
 });
