@@ -1,0 +1,393 @@
+doctype html
+html(lang="en")
+  head
+
+    title Hogaris - Utensilios de cocina
+
+    meta(name="viewport"
+    content="width=device-width, initial-scale=1.0")
+
+    link(
+      rel="stylesheet",
+      href="stylesheet.css",
+      media="screen",
+      title="main"
+    )
+    link(
+      rel="stylesheet",
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      )
+    link(href="https://fonts.googleapis.com/css?family=Montserrat|Varela+Round",
+    rel="stylesheet"
+      )
+  body
+    .container-fluid
+      .row#main-wrapper
+        .col-md-10.col-md-offset-1.col-sm-12#main-col
+          header#header
+            .row
+              .col-md-12#top-header
+                img(src="src/images/logo.png")
+            .row
+              .col-md-12#nav-bar
+                nav.navbar.navbar-default
+                  ul.nav.navbar-nav
+                    li.menu-item-header
+                      a#menu-historia(href="#historia") Historia
+                    li.menu-item-header
+                      .dropdown-menu#productos
+                          span.dropdown-item
+                            a(href="#") Producto 1
+                          span.dropdown-item
+                            a(href="#") Producto 2
+                          span.dropdown-item
+                            a(href="#") Producto 3
+                          span.dropdown-item
+                            a(href="#") Producto 4
+                      a(href="#productos") Productos
+                    li.menu-item-header
+                      a(href="#contacto") Contacto
+                    li.menu-item-header
+                      a(href="#serv-tec") Servicio Técnico
+          main#main
+            .container-fluid
+              .row#tile-row
+                .col-md-12.col-xs-12#tile-box
+                  .tile.lt#r1t1
+                  .tile#r1t2
+                  .tile#r1t3
+                    span NUESTRA HISTORIA
+                  .tile.rt#r1t4
+
+                  .tile.lt#r2t1
+                  .tile#r2t2
+                  .tile#r2t3
+                  .tile.rt#r2t4
+
+                  .tile.lt#r3t1
+                    span CONTACTO SERVICIO
+                  .tile#r3t2
+                  .tile#r3t3
+                  .tile.rt#r3t4
+              .row
+                .col-md-12#separator
+              .row.main-row
+                .col-md-3.col-sm-3#historia
+                  span#title Historia
+                .col-md-9.col-sm-9
+                  p.
+                    Somos una empresa 100% argentina con más de 11 años de trayectoria en la fabricación de máquinas para la elaboración de pastas y accesorios. Entre sus productos, se destacan los desarrollos específicos según la utilización de los mismos: Familiar, Gourmet y Premium; además del complemento: Accesorio Raviolini, para elaborar ravioles.
+                  p.
+                    Los equipos Hogaris son diseñados y fabricados con componentes adecuados para su óptima durabilidad, siendo aptos tanto para el uso doméstico como gastronómico.
+                  p.
+                    Todos los productos son innovaciones pensadas para aportar soluciones a la cocina modera. Con presencia comercial a través de distribuidores en todo el país, los equipos cuentan con servicio técnico de asistencia integral.
+              .row.product-row#row-productos
+                .col-md-3.col-sm-3#productos
+                  span#title Productos
+                .col-md-9.col-sm-9
+                  .header#product-header
+                    .menu-item#familiar FAMILIAR
+                    .menu-item#gourmet GOURMET
+                    .menu-item#premium PREMIUM
+                    .menu-item#raviolini RAVIOLINI
+                    hr
+                    .menu-decoration
+                      .menu-circle#c-familiar
+                    .menu-decoration
+                      .menu-circle#c-gourmet
+                    .menu-decoration
+                      .menu-circle#c-premium
+                    .menu-decoration
+                      .menu-circle#c-raviolini
+              //- FAMILIAR
+              .row.detalles-row
+                .col-md-5.col-md-offset-2.col-sm-12.col-xs-12.col-xs-offset-0
+                  img#familiar-pic(src='src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png', style="width: 100%")
+                  .thumb#thumb-1
+                  .thumb#thumb-2
+                  .thumb#thumb-3
+                .col-md-5.col-sm-12.col-xs-12#col-detalles
+                  h2.module-title PASTAHOGAR FAMILIAR
+
+                  .module-subtitle-container
+                    h3.module-subtitle#pastaHogarFamiliar FABRICADORA DE PASTAS
+                  p.
+                    La PASTAHOGAR FAMILIAR de Hogaris es la fabricadora de pastas ideal para los amantes de la comida casera. El mejor equipo en su categoría para preparar la masa, manteniendo el verdadero sabor de las pastas.
+                  p.
+                    Con PASTAHOGAR® FAMILIAR vuelva al gusto de lo casero, porque “la buona pasta é fatta in casa”.
+              .row.caracteristicas-row
+                .col-md-9.col-sm-9.col-md-offset-3.col-sm-offset-3
+                  h2 CARACTERÍSTICAS
+                  .col-md-6
+                    ul
+                      li.
+                        Rodillos de acero para corte de fideos
+                      li.
+                        Cilindros de acero para sobar la masa
+                      li.
+                        Engranajes de acero
+                      li.
+                        Superficie de acero para apoyar la masa a sobar
+                      li.
+                        Perilla con indicador para regular tamaño de la pasta
+                  .col-md-6
+                    ul
+                      li.
+                        Cómoda manija para optimizar su rotación en uso
+                      li.
+                        Soporte para accesorio raviolero
+                      li.
+                        Estira planchas de hasta 20 cm de ancho
+                      li.
+                        Corta fideos en diversos tamaños
+                      li.
+                        9 graduaciones de espesores para la masa
+              .row.cualidadesAdicionales-row
+                .col-md-9.col-sm-10.col-md-offset-3.col-sm-offset-3
+                  h2 CUALIDADES ADICIONALES
+                  .col-md-6
+                    ul
+                      li.
+                        Producto con garantía por un año
+                      li.
+                        Disponibilidad absoluta de repuestos
+                      li.
+                        Servicio Técnico especializado
+                  .col-md-6
+                    ul
+                      li.
+                        Sistema de fácil armado y desarmado para limpieza
+                      li.
+                        No necesita lubriación para el mantenimiento
+              .row
+                .col-md-9.col-md-offset-3
+                  .gourmetDivider
+              //- GOURMET
+              .row.detalles-row
+                .col-md-5.col-md-offset-2.col-sm-5.col-sm-offset-2
+                  img#familiar-pic(src='src/images/160701_Hog_Pastahogar_-GOURMET_dorada.png', style="width: 100%")
+                  .thumb#thumb-1
+                  .thumb#thumb-2
+                  .thumb#thumb-3
+                .col-md-5.col-sm-5.col-xs-12#col-detalles
+                  h2.module-title PASTAHOGAR GOURMET
+
+                  .module-subtitle-container
+                    h3.module-subtitle#pastaHogarGourmet FABRICADORA DE PASTAS
+                  p.
+                    La PASTAHOGAR GOURMET de Hogaris es la fabricadora de pastas ideal para cocinas con singular estilo. Representa la renovación de un equipo tradicional, con diseño exclusivo y moderna síntesis en sus líneas.
+                  p.
+                    Usted deseará tener instalada la PASTAHOGAR® GOURMET en su cocina, para ser exhibida como la principal protagonista en el sabor de sus comidas caseras.
+              .row.caracteristicas-row
+                .col-md-9.col-sm-9.col-md-offset-3.col-sm-offset-3
+                  h2 CARACTERÍSTICAS
+                  .col-md-6
+                    ul
+                      li.
+                        Rodillos de acero para corte de fideos
+                      li.
+                        Cilindros de acero para sobar la masa
+                      li.
+                        Engranajes de acero
+                      li.
+                        Superficie de acero para apoyar la masa a sobar
+                      li.
+                        Perilla con indicador para regular tamaño de la pasta
+                  .col-md-6
+                    ul
+                      li.
+                        Cómoda manija para optimizar su rotación en uso
+                      li.
+                        Soporte para accesorio raviolero
+                      li.
+                        Estira planchas de hasta 20 cm de ancho
+                      li.
+                        Corta fideos en diversos tamaños
+                      li.
+                        9 graduaciones de espesores para la masa
+              .row.cualidadesAdicionales-row
+                .col-md-9.col-sm-10.col-md-offset-3.col-sm-offset-3
+                  h2 CUALIDADES ADICIONALES
+                  .col-md-6
+                    ul
+                      li.
+                        Producto con garantía por un año
+                      li.
+                        Disponibilidad absoluta de repuestos
+                      li.
+                        Servicio Técnico especializado
+                  .col-md-6
+                    ul
+                      li.
+                        Sistema de fácil armado y desarmado para limpieza
+                      li.
+                        No necesita lubriación para el mantenimiento
+              .row
+                .col-md-9.col-md-offset-3
+                  .premiumDivider
+              //- PREMIUM
+              .row.detalles-row
+                .col-md-5.col-md-offset-2.col-sm-5.col-sm-offset-2
+                  img#familiar-pic(src='src/images/160701_Hog_Pastahogar_-PREMIUM_vistafrente.png', style="width: 100%")
+                  .thumb#thumb-1
+                  .thumb#thumb-2
+                  .thumb#thumb-3
+                .col-md-5.col-sm-5.col-xs-12#col-detalles
+                  h2.module-title PASTAHOGAR PREMIUM
+
+                  .module-subtitle-container
+                    h3.module-subtitle#pastaHogarPremium FABRICADORA DE PASTAS
+                  p.
+                    La PASTAHOGAR GOURMET de Hogaris es la fabricadora de pastas ideal para cocinas con singular estilo. Representa la renovación de un equipo tradicional, con diseño exclusivo y moderna síntesis en sus líneas.
+                  p.
+                    Usted deseará tener instalada la PASTAHOGAR® GOURMET en su cocina, para ser exhibida como la principal protagonista en el sabor de sus comidas caseras.
+              .row.caracteristicas-row
+                .col-md-9.col-sm-9.col-md-offset-3.col-sm-offset-3
+                  h2 CARACTERÍSTICAS
+                  .col-md-6
+                    ul
+                      li.
+                        Rodillos de acero para corte de fideos
+                      li.
+                        Cilindros de acero para sobar la masa
+                      li.
+                        Engranajes de acero
+                      li.
+                        Superficie de acero para apoyar la masa a sobar
+                      li.
+                        Perilla con indicador para regular tamaño de la pasta
+                  .col-md-6
+                    ul
+                      li.
+                        Cómoda manija para optimizar su rotación en uso
+                      li.
+                        Soporte para accesorio raviolero
+                      li.
+                        Estira planchas de hasta 20 cm de ancho
+                      li.
+                        Corta fideos en diversos tamaños
+                      li.
+                        9 graduaciones de espesores para la masa
+              .row.cualidadesAdicionales-row
+                .col-md-9.col-sm-10.col-md-offset-3.col-sm-offset-3
+                  h2 CUALIDADES ADICIONALES
+                  .col-md-6
+                    ul
+                      li.
+                        Producto con garantía por un año
+                      li.
+                        Disponibilidad absoluta de repuestos
+                      li.
+                        Servicio Técnico especializado
+                  .col-md-6
+                    ul
+                      li.
+                        Sistema de fácil armado y desarmado para limpieza
+                      li.
+                        No necesita lubriación para el mantenimiento
+              .row
+                .col-md-9.col-md-offset-3
+                  .endingDivider
+              //- CONTACTO
+              .row.contacto-row
+                .col-md-3.col-sm-3#contacto
+                  span#title Contacto
+                .col-md-5.col-sm-12
+                  span#telefonos.
+                    (+5411)4755-8410 / 4713-7321
+                  span#mail.
+                    info@hogaris.com.ar
+                .col-md-4.col-sm-12
+                  span#facebook.
+                    www.facebook.com/Hogaris
+              //- SEPARADOR
+              .row.contact-separator
+                .col-md-9.col-md-offset-3
+                  .separator
+              //- FORM
+              .row.form
+                .col-md-9.col-md-offset-3
+                  .row
+                    .col-md-6
+                      input#input-nombre.form-control(type='text', placeholder='Nombre y apellido')
+                      input#input-email.form-control(type='text', placeholder='E-mail')
+                      input#input-telefono.form-control(type='text', placeholder='Teléfono')
+                      input#input-direccion.form-control(type='text', placeholder='Dirección')
+                      .btn-group
+                        button.btn.btn-default.dropdown-toggle#input-pais(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Seleccione el país
+                          span.caret
+                        ul.dropdown-menu#dropdown-pais
+                          li
+                            a(href="#") Argentina
+                          li
+                            a(href="#") Uruguay
+                          li
+                            a(href='#') Brasil
+                      .btn-group
+                        button.btn.btn-default.dropdown-toggle#input-provincia(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Seleccione la provincia
+                          span.caret
+                      .btn-group
+                        button.btn.btn-default.dropdown-toggle#input-ciudad(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Seleccione la ciudad
+                          span.caret
+                      .btn-group
+                        button.btn.btn-default.dropdown-toggle#input-conocio(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') ¿Cómo nos conoció?
+                          span.caret
+                    .col-md-6
+                      span#consulta-a Consulta dirigida a:
+                      .btn-group
+                        button.btn.btn-default.dropdown-toggle#input-consulta-a(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Contacto
+                          span.caret
+                      textarea#input-consulta.input-sm.form-control(type='text')
+                  .row.submit-form
+                    .col-md-8.col-md-offset-4
+                    button.btn.btn-danger#submit-button ENVIAR
+              //- SERVICIO TÉCNICO
+              .row.serviciotecnico-row
+                .col-md-3.col-sm-3#serv-tec
+                  span#title Servicio Técnico
+                .col-md-5.col-sm-5#paragraph-col
+                  p serviciotecnico@hogaris.com.ar
+                  p administracion@hogarios.com.ar
+                  p (+5411) 4755-8410 / 4713-7321
+                  p info@hogaris.com.ar
+                .col-md-4.col-sm-4
+                  p Máquina para elaborar pastas PASTAHOGAR
+                  p Fabrica y garantiza: HOGARIS NOVA S.A.
+                  p Carlos Gardel 2554, Villa Libertad, San Martín
+                  p Provincia de Buenos Aires
+              .row.contact-separator
+                .col-md-9.col-md-offset-3
+                  .separator#footer-separator
+    footer#footer
+      .container-fluid
+        .row
+          .col-md-10.col-md-offset-1
+            .row
+              .col-md-4
+                img#footer-logo(src='src/images/footer-logo.png')
+              .col-md-2
+                h1 Hogaris
+                a(href='#historia', alt='Historia') Historia
+              .col-md-2
+                h1 Productos
+                a(href='#', alt='Historia') Pastahogar Familiar
+                a(href='#historia', alt='Historia') Pastahogar Gourmet
+                a(href='#historia', alt='Historia') Pastahogar Premium
+                a(href='#historia', alt='Historia') Accesorio Raviolini
+              .col-md-2
+                h1 Contacto
+                a(href='#facebook', alt='Historia') Facebook
+                a(href='.form', alt='Historia') Dejanos tu consulta
+              .col-md-2
+                h1 Servicio Técnico
+
+
+            .row#firma
+              .col-md-12.
+                Diseño Web: Agatiello Agencia Creativa
+      .scriptVault(style="display: none")
+        script(src="src/paper-full.min.js")
+        script(src="src/paper-core.min.js")
+        script(src="src/jquery-3.1.1.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        script(src="../es6/main.js")

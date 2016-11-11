@@ -1,0 +1,456 @@
+@import '_reset.styl'
+@import '_variables.styl'
+
+html
+  body
+    background-color: lighten($hog-llgray, 70%)
+    height: 100vh
+    #main-wrapper
+      #main-col
+        background-color: white
+        padding 0
+        #header
+          padding 0px 15px
+          .row
+            #top-header
+              height 10vw
+              background-color: white
+              min-height: 70px
+              @media screen and (max-width: 480px) {
+                height 15vh
+              }
+              img
+                height: 6vw
+                margin-top: 2vw
+                margin-left: 20px
+                min-height: 50px
+                @media screen and (max-width: 480px) {
+                  width 60vw
+                  height auto
+                  margin 2vw 18vw
+                }
+            #nav-bar
+              padding: 0
+              position: relative;
+              z-index: 100
+              @media screen and (max-width: 480px) {
+                display: none
+              }
+              nav
+                margin: 0px
+                border-radius: 0
+                background-color: $hog-lgray
+                border: none
+                ul
+                  height: 10vh
+                  width: 100%
+                  li
+                    display: inline-block;
+                    width: 25%
+                    height: 10vh
+                    transition: background-color 0.2s ease-in-out
+                    &:hover
+                      background-color: darken($hog-lgray, 30%)
+                  .menu-item-header
+                    position: relative;
+                  .menu-item-header:hover .dropdown-menu
+                      display: block
+                    .dropdown-menu
+                      display none
+                      position: absolute;
+                      background-color: $hog-llgray
+                      border-radius: 0px
+                      min-width: 25%
+                      width: 100%
+                      height: 6vw * 4
+                      padding: 0
+                      z-index: 1000
+                      border: none
+                      .dropdown-item
+                        width: 100%
+                        display: inline-block;
+                        width: 100%
+                        height: 6vw
+                        line-height: 6vw
+                        text-align: center;
+                        transition: 0.2s ease-in-out all
+                        &:hover
+                          background-color: darken($hog-lgray, 70%)
+                        a
+                          text-decoration: none
+                    .menu-item-header:hover .dropdown-menu
+                        display: block
+                      a
+                        font-size: 1.8vw
+                        color white
+                        font-family: 'Varela Round'
+                        letter-spacing: 2px
+                        height: 8vh
+                        text-align: center;
+                        margin: 1vh 0px
+        #main
+          #tile-row //Este es el damero de arriba
+            #tile-box
+              padding: 0
+              .tile
+                width: 25%
+                padding-bottom: 25%
+                background-color: white
+                float: left
+                transition: 0.1s all ease-in-out
+                position: relative;
+                z-index: 1
+                @media screen and (max-width: 480px) {
+                  width 50%
+                  height 50vw
+                  margin 0
+                  float left
+                }
+                &:hover
+                  box-shadow: 0px 1px 9px -2px black
+                  z-index: 90
+                  transform: scale(1.02)
+                span
+                  position: absolute
+                  color: $hog-red
+                  text-align: center
+                  font-family: 'Varela Round'
+                  font-size: 2vw
+                  margin: 40% 12%
+                  @media screen and (max-width: 480px) {
+                    font-size 5vw
+                  }
+
+              #r1t1, #r2t1, #r3t1
+                width: 25%
+                padding-bottom: 25%
+                background-color: white
+                float: left
+                transition: 0.2s all ease-in-out
+                position: relative;
+                z-index: 1
+                @media screen and (max-width: 480px) {
+                  width 50%
+                  height 50vw
+                  margin 0
+                  float left
+                }
+                &:hover
+                  box-shadow: 0px 1px 9px -2px black
+                  z-index: 90
+                  transform: scale(1.02) translateX(3px);
+              #r1t4, #r2t4, #r3t4
+                width: 25%
+                padding-bottom: 25%
+                background-color: white
+                float: left
+                transition: 0.2s all ease-in-out
+                position: relative;
+                z-index: 1
+                @media screen and (max-width: 480px) {
+                  width 50%
+                  height 50vw
+                  margin 0
+                  float left
+                }
+                &:hover
+                  box-shadow: 0px 1px 9px -2px black
+                  z-index: 90
+                  transform: scale(1.02) translateX(-3px);
+              #r1t1
+                background-color: $hog-gray
+              #r1t2
+                background-image: url('src/images/tile_2.png')
+                background-size: cover
+              #r1t3
+                background-color: white
+              #r1t4
+                background-image: url('src/images/tile_3.png')
+                background-size: cover
+              #r2t1
+                background-image: url('src/images/tile_1.png')
+                background-size: cover
+              #r2t2
+                background-color: $hog-orange
+              #r2t3
+                background-image: url('src/images/tile_4.png')
+                background-size: cover
+              #r2t4
+                background-color: $hog-yellow
+              #r3t1
+                background-color: $hog-llgray
+              #r3t2
+                background-image: url('src/images/tile_5.png')
+                background-size: cover
+              #r3t3
+                background-color: $hog-olive
+              #r3t4
+                background-color: $hog-red
+          #separator
+            background-color: white
+            height: 200px
+          #historia
+            text-align: center
+            margin-bottom: 30px
+          p
+            font-family: 'Varela Round'
+            padding-right: 5vw
+            text-align: justify;
+          #historia #title
+            font-family: 'Varela Round'
+            font-size: 2em
+            text-align: center
+          #row-productos
+            text-align: center;
+            margin-top: 200px
+          #productos div, #title
+            font-family: 'Varela Round'
+          #productos #title
+            font-size: 2em
+            margin-bottom: 30px
+          #product-header
+            padding-right: 5vw
+            .menu-item
+              display: inline-block;
+              width: 25%
+              font-family: 'Varela Round'
+              font-size: 1.2em
+              transition: transform  0.2s ease-in-out
+              cursor: pointer;
+              &:hover
+                transform: scale(1.2)
+            hr
+              border-top: 1px gray solid
+            .menu-decoration
+              width 25%
+              height: 30px
+              float: left
+              position: relative;
+              bottom: 27px
+              left: 6vw
+              .menu-circle
+                width: 15px
+                height: 15px
+                border-radius: 50%
+                background-color: $hog-yellow
+                transition: transform 0.2s ease-in-out
+              #c-gourmet
+                background-color: $hog-gray
+              #c-premium
+                background-color: $hog-olive
+              #c-raviolini
+                background-color: $hog-orange
+          .detalles-row
+            margin-top 30px
+            .thumb
+              width: 8vw
+              height: 8vw
+              margin: 0 10px
+              float: left;
+              position: relative;
+              left: 70px
+              transition: all 0.2s ease-in-out
+              @media screen and (max-width: 480px) {
+                width 23vw
+                height 23vw
+                margin 0
+              }
+              @media screen and (max-width: 768px) {
+                width 20vw
+                height 20vw
+                margin 0
+              }
+              &:hover
+                transform: translateY(-10px);
+            #thumb-1
+              background-image: url('src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png')
+              background-size: cover;
+              background-position: bottom;
+              background-repeat: no-repeat;
+            #thumb-2
+              background-image: url('src/images/160701_Hog_Pastahogar_-FAMILIAR_naranja.png')
+              background-size: cover;
+              background-position: bottom;
+              background-repeat: no-repeat;
+            #thumb-3
+              background-image: url('src/images/160701_Hog_Pastahogar_-FAMILIAR_verde.png')
+              background-size: cover;
+              background-position: bottom;
+              background-repeat: no-repeat;
+            #col-detalles
+              padding-right: 5vw
+              h2
+                font-family: 'Varela Round'
+                border-bottom 0px
+                font-size 30px
+                color darken($hog-lgray, 70%)
+              .module-subtitule-container
+                width: 100%
+              h3
+                font-family: 'Varela Round'
+                color: $hog-yellow
+                border-top: 3px solid $hog-yellow
+                border-bottom: 3px solid $hog-yellow
+                line-height: 1.6em
+                font-size: 1.2em
+              #pastaHogarGourmet
+                border-top: 3px solid $hog-gray
+                border-bottom: 3px solid $hog-gray
+                color: $hog-gray
+              #pastaHogarPremium
+                border-top: 3px solid $hog-olive
+                border-bottom: 3px solid $hog-olive
+                color: $hog-olive
+              p
+                width: 100%
+                font-family: 'Varela Round'
+                margin: 0
+                padding: 0
+                color: darken($hog-lgray, 30%)
+          .caracteristicas-row
+            padding-right 3vw
+            h2
+              font-family: 'Varela Round'
+              color darken($hog-lgray, 50%)
+              border-bottom 2px darken($hog-lgray, 50%) solid
+              font-size 20px
+              margin-bottom 20px
+            ul
+              margin-bottom 0px
+              li
+                font-family: 'Varela Round'
+                color: darken($hog-lgray, 30%)
+          .cualidadesAdicionales-row
+            border-bottom none
+            padding-right 3vw
+            h2
+              font-family 'Varela Round'
+              color darken($hog-lgray, 50%)
+              border-bottom 2px darken($hog-lgray, 50%) solid
+              font-size 20px
+              margin-bottom 20px
+            ul
+              margin-bottom 0px
+              li
+                font-family: 'Varela Round'
+                color: darken($hog-lgray, 30%)
+                font-size 15px
+          .row
+            .col-md-9
+              .gourmetDivider
+                margin-top 30px
+                margin-right 3vw
+                height 10px
+                background-color $hog-gray
+              .premiumDivider
+                background-color $hog-yellow
+                margin-top 30px
+                margin-right 3vw
+                height 10px
+              .endingDivider
+                background-color $hog-olive
+                margin-top 30px
+                margin-right 3vw
+                height 10px
+          .contacto-row
+            margin-top 40px
+            #contacto
+              text-align center
+              #title
+                font-size 2em
+            span
+              display block
+              margin-top 20px
+              font-family 'Varela Round'
+              font-size 18px
+          .contact-separator
+            padding-right 3vw
+            .separator
+              height 2px
+              width 100%
+              background-color gray
+              margin 20px 0
+          .form
+            padding-right 2vw
+            .col-md-9
+              #consulta-a
+                font-family 'Varela Round'
+                margin-top 15px
+                margin-bottom 9px
+                display block
+              .caret
+                position relative
+                left 2px
+              input, button, textarea
+                margin 10px 0px 0px
+                border-radius 30px
+                background-color $hog-lgray
+                color darken($hog-lgray, 50%)
+                width 100%
+                &:focus
+                  box-shadow: 0px 1px 10px -3px $hog-yellow
+                  border: $hog-yellow 1px solid
+              #input-direccion
+                margin-bottom 0px
+              #input-consulta
+                height 253px
+                font-size 20px
+                line-height 30px
+              .btn-group
+                width 100%
+                padding 0
+                border-radius 30px
+                #dropdown-pais
+                  background-color $hog-lgray
+                  top 50px
+                  width 100%
+          .submit-form
+            padding 0 1vw
+            #submit-button
+              width 100%
+              margin-top 30px
+              font-family 'Varela Round'
+              text-align center
+              border-radius 0px
+              background-color $hog-red
+              color lighten($hog-red, 80%)
+          .serviciotecnico-row
+            margin-top 70px
+            #paragraph-col
+              margin-top 30px
+              @media screen and (min-width: 768px) {
+                margin-top 0px
+              }
+            #serv-tec
+              text-align center
+              #title
+                font-size 2em
+            p
+              font-size 17px
+              line-height 20px
+              color darken($hog-lgray, 30%)
+          .contact-separator
+            #footer-separator
+              margin 70px 0px
+    #footer
+      margin-top 70px
+      #footer-logo
+        width 80%
+        transition transform 0.2s linear
+        &:hover
+          transform translateY(-20px)
+      h1
+        font-size 23px
+      a
+        text-decoration none
+        color darken($hog-lgray, 30%)
+        font-size 15px
+        display block
+        &:hover
+          color darken($hog-lgray, 80%)
+      #firma
+        color darken($hog-lgray, 30%)
+        font-size 1em
+        margin-top 30px
+        margin-left 10px
+        margin-bottom 20px
