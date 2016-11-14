@@ -521,8 +521,9 @@ html body #main-wrapper #main-col #main .form .col-md-9 #input-direccion {
 }
 html body #main-wrapper #main-col #main .form .col-md-9 #input-consulta {
   height: 253px;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 30px;
+  padding: 20px;
 }
 html body #main-wrapper #main-col #main .form .col-md-9 .btn-group {
   width: 100%;
