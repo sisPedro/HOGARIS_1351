@@ -1,119 +1,120 @@
-'use strict'
+'use strict';
 
-$(document).ready(function(){
+$(document).ready(function () {
   console.log('Hello world!');
 
-// Product header animation
+  // Product header animation
 
-  $('#familiar, #c-familiar').hover(function(){
+  $('#familiar, #c-familiar').hover(function () {
     $('#c-familiar').css({
-      'transform':'scale(2)'
-    })
-  },function(){
+      'transform': 'scale(2)'
+    });
+  }, function () {
     $('#c-familiar').css({
-      'transform':'scale(1)'
-    })
-  })
+      'transform': 'scale(1)'
+    });
+  });
 
-  $('#gourmet, #c-gourmet').hover(function(){
+  $('#gourmet, #c-gourmet').hover(function () {
     $('#c-gourmet').css({
-      'transform':'scale(2)'
-    })
-  },function(){
+      'transform': 'scale(2)'
+    });
+  }, function () {
     $('#c-gourmet').css({
-      'transform':'scale(1)'
-    })
-  })
+      'transform': 'scale(1)'
+    });
+  });
 
-  $('#premium, #c-premium').hover(function(){
+  $('#premium, #c-premium').hover(function () {
     $('#c-premium').css({
-      'transform':'scale(2)'
-    })
-  },function(){
+      'transform': 'scale(2)'
+    });
+  }, function () {
     $('#c-premium').css({
-      'transform':'scale(1)'
-    })
-  })
+      'transform': 'scale(1)'
+    });
+  });
 
-  $('#raviolini, #c-raviolini').hover(function(){
+  $('#raviolini, #c-raviolini').hover(function () {
     $('#c-raviolini').css({
-      'transform':'scale(2)'
-    })
-  },function(){
+      'transform': 'scale(2)'
+    });
+  }, function () {
     $('#c-raviolini').css({
-      'transform':'scale(1)'
-    })
-  })
+      'transform': 'scale(1)'
+    });
+  });
 
   // Thumbnail replacement
 
-  $('#thumb-2').hover(function(){
-    $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_naranja.png')
-  }, function(){
-    $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png')
-  })
+  $('#thumb-2').hover(function () {
+    $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_naranja.png');
+  }, function () {
+    $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png');
+  });
 
-  $('#thumb-3').hover(function(){
-    $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_verde.png')
-  }, function(){
-    $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png')
-  })
+  $('#thumb-3').hover(function () {
+    $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_verde.png');
+  }, function () {
+    $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png');
+  });
 
   // Scrolling from menu
 
-  let historia = $('#historia');
-  let historiaPosition = historia.position();
-  let historiaPositionTop = historiaPosition.top;
+  var historia = $('#historia');
+  var historiaPosition = historia.position();
+  var historiaPositionTop = historiaPosition.top;
 
-  $('#menu-historia').click(function(){
-    $(document).scrollTop(historiaPositionTop)
-  })
+  $('#menu-historia').click(function () {
+    $(document).scrollTop(historiaPositionTop);
+  });
 
   // FORM COLLECT DATA
 
-    $('#select-rrhh').click(function(){
-      $('#input-contacto').html('R.R.H.H')
-    })
+  $('#select-rrhh').click(function () {
+    $('#input-contacto').html('R.R.H.H');
+  });
 
-    $('#select-ventas').click(function(){
-      $('#input-contacto').html('Ventas')
-    })
+  $('#select-ventas').click(function () {
+    $('#input-contacto').html('Ventas');
+  });
 
-    $('#select-informes').click(function(){
-      $('#input-contacto').html('Informes')
-    })
+  $('#select-informes').click(function () {
+    $('#input-contacto').html('Informes');
+  });
 
-    $('#select-internet').click(function(){
-      $('#dropdown-conocio').html('Internet')
-    })
+  $('#select-internet').click(function () {
+    $('#dropdown-conocio').html('Internet');
+  });
 
-    $('#select-viaPublica').click(function(){
-      $('#dropdown-conocio').html('Vía Pública')
-    })
+  $('#select-viaPublica').click(function () {
+    $('#dropdown-conocio').html('VÃ­a PÃºblica');
+  });
 
-    $('#select-recomendacionPersonal').click(function(){
-      $('#dropdown-conocio').html('Recomendación Personal')
-    })
+  $('#select-recomendacionPersonal').click(function () {
+    $('#dropdown-conocio').html('RecomendaciÃ³n Personal');
+  });
 
-    function collectData() {
-      let nombre = $('#input-nombre').val();
-      let email = $('#input-email').val();
-      let telefono = $('#input-telefono').val();
-      let direccion = $('#input-direccion').val();
-      let pais = $('#input-pais').val();
-      let provincia = $('#input-provincia').val();
-      let ciudad = $('#input-ciudad').val();
-      let comoNosConocio = $('#dropdown-conocio').html();
-      let destinatario = $('#input-contacto').html();
-      let mensaje = $('#input-consulta').val();
+  function collectData() {
+    var nombre = $('#input-nombre').val();
+    var email = $('#input-email').val();
+    var telefono = $('#input-telefono').val();
+    var direccion = $('#input-direccion').val();
+    var pais = $('#input-pais').val();
+    var provincia = $('#input-provincia').val();
+    var ciudad = $('#input-ciudad').val();
+    var comoNosConocio = $('#dropdown-conocio').html();
+    var destinatario = $('#input-contacto').html();
+    var mensaje = $('#input-consulta').val();
 
-      if (nombre == "" || email == "" || telefono == "" || direccion == "" || pais == "" || provincia == "" || ciudad == "" || message == "") {
-        $('#col-consulta').append( "<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Usted no ha completado todos los datos requeridos. <div>");
-      } else {
-        $('#col-consulta').append( "<div class='alert alert-success alerta-consulta' role='alert'> <strong> ¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
-      }
-
-      let datos = {
+    if (nombre == "" || email == "" || telefono == "" || direccion == "" || pais == "" || provincia == "" || ciudad == "") {
+      $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Usted no ha completado todos los datos requeridos. <div>");
+    } else if ( destinatario =="Contacto<span class=\"glyphicon glyphicon-menu-down\"></span>")
+    {
+        $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Olvido dirigir su consulta a un contacto . <div>");
+    }else {
+      $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> Â¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
+        var datos = {
       'nombreYApellido': nombre,
       'email': email,
       'telefono': telefono,
@@ -124,13 +125,15 @@ $(document).ready(function(){
       'comoNosConocio': comoNosConocio,
       'destinatario': destinatario,
       'mensaje': mensaje
-      }
-
-      console.log(datos)
+    };
     }
+    
 
-    $('#submit-button').click(function(){
-      collectData();
-    })
 
+    console.log(datos);
+  }
+
+  $('#submit-button').click(function () {
+    collectData();
+  });
 });
