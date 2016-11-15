@@ -88,11 +88,11 @@ $(document).ready(function () {
   });
 
   $('#select-viaPublica').click(function () {
-    $('#dropdown-conocio').html('Vía Pública');
+    $('#dropdown-conocio').html('VÃ­a PÃºblica');
   });
 
   $('#select-recomendacionPersonal').click(function () {
-    $('#dropdown-conocio').html('Recomendación Personal');
+    $('#dropdown-conocio').html('RecomendaciÃ³n Personal');
   });
 
   function collectData() {
@@ -107,13 +107,14 @@ $(document).ready(function () {
     var destinatario = $('#input-contacto').html();
     var mensaje = $('#input-consulta').val();
 
-    if (nombre == "" || email == "" || telefono == "" || direccion == "" || pais == "" || provincia == "" || ciudad == "" || message == "") {
+    if (nombre == "" || email == "" || telefono == "" || direccion == "" || pais == "" || provincia == "" || ciudad == "") {
       $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Usted no ha completado todos los datos requeridos. <div>");
-    } else {
-      $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> ¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
-    }
-
-    var datos = {
+    } else if ( destinatario =="Contacto<span class=\"glyphicon glyphicon-menu-down\"></span>")
+    {
+        $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Olvido dirigir su consulta a un contacto . <div>");
+    }else {
+      $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> Â¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
+        var datos = {
       'nombreYApellido': nombre,
       'email': email,
       'telefono': telefono,
@@ -125,6 +126,9 @@ $(document).ready(function () {
       'destinatario': destinatario,
       'mensaje': mensaje
     };
+    }
+    
+
 
     console.log(datos);
   }
