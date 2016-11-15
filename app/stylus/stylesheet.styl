@@ -1,6 +1,9 @@
 @import '_reset.styl'
 @import '_variables.styl'
 
+// *
+//   outline solid cyan 1px
+
 html
   body
     background-color: lighten($hog-llgray, 70%)
@@ -33,7 +36,7 @@ html
               padding: 0
               position: relative;
               z-index: 100
-              @media screen and (max-width: 480px) {
+              @media screen and (max-width: 768px) {
                 display: none
               }
               nav
@@ -195,7 +198,7 @@ html
           p
             font-family: 'Varela Round'
             padding-right: 5vw
-            text-align: justify;
+            text-align: justify
           #historia #title
             font-family: 'Varela Round'
             font-size: 2em
@@ -203,13 +206,14 @@ html
           #row-productos
             text-align: center;
             margin-top: 200px
-          #productos div, #title
-            font-family: 'Varela Round'
-          #productos #title
-            font-size: 2em
-            margin-bottom: 30px
-          #product-header
-            padding-right: 5vw
+            #productos
+              div, #title
+                font-family: 'Varela Round'
+              #title
+                font-size: 2em
+                margin-bottom: 30px
+            #product-header
+              padding-right: 5vw
             .menu-item
               display: inline-block;
               width: 25%
@@ -219,6 +223,9 @@ html
               cursor: pointer;
               &:hover
                 transform: scale(1.2)
+              @media screen and (max-width: 480px) {
+                font-size 12px
+              }
             hr
               border-top: 1px gray solid
             .menu-decoration
@@ -228,6 +235,9 @@ html
               position: relative;
               bottom: 27px
               left: 6vw
+              @media screen and (max-width: 480px) {
+                left 8vw
+              }
               .menu-circle
                 width: 15px
                 height: 15px
@@ -242,6 +252,11 @@ html
                 background-color: $hog-orange
           .detalles-row
             margin-top 30px
+            img
+              width 100%
+              @media screen and (max-width: 768px) {
+                width 100%
+              }
             .thumb
               width: 8vw
               height: 8vw
@@ -255,7 +270,7 @@ html
                 height 23vw
                 margin 0
               }
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 790px) {
                 width 20vw
                 height 20vw
                 margin 0
@@ -389,6 +404,7 @@ html
                 color darken($hog-lgray, 50%)
                 width 100%
                 border 1px solid darken($hog-lgray, 10%)
+                font-family 'Varela Round'
                 &:focus
                   box-shadow: 0px 1px 10px -3px $hog-yellow
                   border: $hog-yellow 1px solid
@@ -440,12 +456,15 @@ html
             #footer-separator
               margin 70px 0px
     #footer
-      margin-top 70px
+      margin-top 50px
       #footer-logo
         width 80%
         transition transform 0.2s linear
         &:hover
           transform translateY(-20px)
+        @media screen and (min-width: 768px) {
+          width 50%
+        }
       h1
         font-size 23px
       a

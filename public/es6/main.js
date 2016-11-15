@@ -92,7 +92,7 @@ $(document).ready(function () {
   });
 
   $('#select-recomendacionPersonal').click(function () {
-    $('#dropdown-conocio').html('RecomendaciÃ³n Personal');
+    $('#dropdown-conocio').html('Recomendación Personal');
   });
 
   function collectData() {
@@ -109,27 +109,23 @@ $(document).ready(function () {
 
     if (nombre == "" || email == "" || telefono == "" || direccion == "" || pais == "" || provincia == "" || ciudad == "") {
       $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Usted no ha completado todos los datos requeridos. <div>");
-    } else if ( destinatario =="Contacto<span class=\"glyphicon glyphicon-menu-down\"></span>")
-    {
-        $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Olvido dirigir su consulta a un contacto . <div>");
-    }else {
-      $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> Â¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
-        var datos = {
-      'nombreYApellido': nombre,
-      'email': email,
-      'telefono': telefono,
-      'direccion': direccion,
-      'pais': pais,
-      'provincia': provincia,
-      'ciudad': ciudad,
-      'comoNosConocio': comoNosConocio,
-      'destinatario': destinatario,
-      'mensaje': mensaje
-    };
+    } else if (destinatario == "Contacto<span class='glyphicon glyphicon-menu-down'></span>") {
+      $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Olvidó dirigir su consulta a un contacto. <div>");
+    } else {
+      $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> ¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
+      var datos = {
+        'nombreYApellido': nombre,
+        'email': email,
+        'telefono': telefono,
+        'direccion': direccion,
+        'pais': pais,
+        'provincia': provincia,
+        'ciudad': ciudad,
+        'comoNosConocio': comoNosConocio,
+        'destinatario': destinatario,
+        'mensaje': mensaje
+      };
     }
-    
-
-
     console.log(datos);
   }
 

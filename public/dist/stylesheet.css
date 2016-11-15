@@ -44,7 +44,7 @@ html body #main-wrapper #main-col #header .row #nav-bar {
   position: relative;
   z-index: 100;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   html body #main-wrapper #main-col #header .row #nav-bar {
     display: none;
   }
@@ -270,18 +270,18 @@ html body #main-wrapper #main-col #main #row-productos {
   text-align: center;
   margin-top: 200px;
 }
-html body #main-wrapper #main-col #main #productos div,
-html body #main-wrapper #main-col #main #title {
+html body #main-wrapper #main-col #main #row-productos #productos div,
+html body #main-wrapper #main-col #main #row-productos #productos #title {
   font-family: 'Varela Round';
 }
-html body #main-wrapper #main-col #main #productos #title {
+html body #main-wrapper #main-col #main #row-productos #productos #title {
   font-size: 2em;
   margin-bottom: 30px;
 }
-html body #main-wrapper #main-col #main #product-header {
+html body #main-wrapper #main-col #main #row-productos #product-header {
   padding-right: 5vw;
 }
-html body #main-wrapper #main-col #main #product-header .menu-item {
+html body #main-wrapper #main-col #main #row-productos .menu-item {
   display: inline-block;
   width: 25%;
   font-family: 'Varela Round';
@@ -289,13 +289,18 @@ html body #main-wrapper #main-col #main #product-header .menu-item {
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
 }
-html body #main-wrapper #main-col #main #product-header .menu-item:hover {
+html body #main-wrapper #main-col #main #row-productos .menu-item:hover {
   transform: scale(1.2);
 }
-html body #main-wrapper #main-col #main #product-header hr {
+@media screen and (max-width: 480px) {
+  html body #main-wrapper #main-col #main #row-productos .menu-item {
+    font-size: 12px;
+  }
+}
+html body #main-wrapper #main-col #main #row-productos hr {
   border-top: 1px #808080 solid;
 }
-html body #main-wrapper #main-col #main #product-header .menu-decoration {
+html body #main-wrapper #main-col #main #row-productos .menu-decoration {
   width: 25%;
   height: 30px;
   float: left;
@@ -303,24 +308,37 @@ html body #main-wrapper #main-col #main #product-header .menu-decoration {
   bottom: 27px;
   left: 6vw;
 }
-html body #main-wrapper #main-col #main #product-header .menu-decoration .menu-circle {
+@media screen and (max-width: 480px) {
+  html body #main-wrapper #main-col #main #row-productos .menu-decoration {
+    left: 8vw;
+  }
+}
+html body #main-wrapper #main-col #main #row-productos .menu-decoration .menu-circle {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: #c79100;
   transition: transform 0.2s ease-in-out;
 }
-html body #main-wrapper #main-col #main #product-header .menu-decoration #c-gourmet {
+html body #main-wrapper #main-col #main #row-productos .menu-decoration #c-gourmet {
   background-color: #8fa3a3;
 }
-html body #main-wrapper #main-col #main #product-header .menu-decoration #c-premium {
+html body #main-wrapper #main-col #main #row-productos .menu-decoration #c-premium {
   background-color: #8d9237;
 }
-html body #main-wrapper #main-col #main #product-header .menu-decoration #c-raviolini {
+html body #main-wrapper #main-col #main #row-productos .menu-decoration #c-raviolini {
   background-color: #e46d35;
 }
 html body #main-wrapper #main-col #main .detalles-row {
   margin-top: 30px;
+}
+html body #main-wrapper #main-col #main .detalles-row img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  html body #main-wrapper #main-col #main .detalles-row img {
+    width: 100%;
+  }
 }
 html body #main-wrapper #main-col #main .detalles-row .thumb {
   width: 8vw;
@@ -338,7 +356,7 @@ html body #main-wrapper #main-col #main .detalles-row .thumb {
     margin: 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 790px) {
   html body #main-wrapper #main-col #main .detalles-row .thumb {
     width: 20vw;
     height: 20vw;
@@ -574,7 +592,7 @@ html body #main-wrapper #main-col #main .contact-separator #footer-separator {
   margin: 70px 0px;
 }
 html body #footer {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 html body #footer #footer-logo {
   width: 80%;
@@ -582,6 +600,11 @@ html body #footer #footer-logo {
 }
 html body #footer #footer-logo:hover {
   transform: translateY(-20px);
+}
+@media screen and (min-width: 768px) {
+  html body #footer #footer-logo {
+    width: 50%;
+  }
 }
 html body #footer h1 {
   font-size: 23px;
