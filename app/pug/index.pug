@@ -13,13 +13,12 @@ html(lang="en")
       media="screen",
       title="main"
     )
+
     link(
       rel="stylesheet",
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       )
-    link(href="https://fonts.googleapis.com/css?family=Montserrat|Varela+Round",
-    rel="stylesheet"
-      )
+
   body
     .container-fluid
       .row#main-wrapper
@@ -27,8 +26,13 @@ html(lang="en")
           //- HEADER
           header#header
             .row
-              .col-md-12#top-header
+              .col-md-6.col-sm-6.col-xs-8#top-header
                 img(src="src/images/logo.png")
+              .col-md-6.col-sm-6.col-xs-2#top-flogo
+                a(href="http://www.facebook.com/Hogaris")
+                  img(src="src/images/flogo-or.png")
+              .col-md-0.col-sm-0.col-xs-2#resp-menu
+                span.glyphicon.glyphicon-menu-hamburger
             .row
               .col-md-12#nav-bar
                 nav.navbar.navbar-default
@@ -36,16 +40,16 @@ html(lang="en")
                     li.menu-item-header
                       a#menu-historia(href="#historia") Historia
                     li.menu-item-header
+                      a#menu-productos(href="#") Productos
                       .dropdown-menu#productos
                           span.dropdown-item
-                            a(href="#") Producto 1
+                            a(href="#") Linea PASTAHOGAR
                           span.dropdown-item
                             a(href="#") Producto 2
                           span.dropdown-item
                             a(href="#") Producto 3
                           span.dropdown-item
                             a(href="#") Producto 4
-                      a(href="#productos") Productos
                     li.menu-item-header
                       a(href="#contacto") Contacto
                     li.menu-item-header
@@ -56,21 +60,28 @@ html(lang="en")
               .row#tile-row
                 .col-md-12.col-xs-12#tile-box
                   .tile.lt#r1t1
+                    span PASTAHOGAR GOURMET
                   .tile#r1t2
                   .tile#r1t3
                     span NUESTRA HISTORIA
                   .tile.rt#r1t4
+                    span PROMOCIÓN
 
                   .tile.lt#r2t1
                   .tile#r2t2
+                    span ACCESORIO RAVIOLINI
                   .tile#r2t3
                   .tile.rt#r2t4
+                    span PASTAHOGAR FAMILIAR
 
                   .tile.lt#r3t1
                     span CONTACTO SERVICIO
                   .tile#r3t2
                   .tile#r3t3
+                    span PASTAHOGAR PREMIUM
                   .tile.rt#r3t4
+                    a(href="http://www.facebook.com/Hogaris")
+                      img(src="src/images/flogo-wh.png")
               .row
                 .col-md-12#separator
               .row.main-row
@@ -231,9 +242,6 @@ html(lang="en")
               .row.detalles-row
                 .col-md-5.col-md-offset-2.col-sm-5.col-sm-offset-2
                   img#familiar-pic(src='src/images/160701_Hog_Pastahogar_-PREMIUM_vistafrente.png', style="width: 100%")
-                  .thumb#thumb-1
-                  .thumb#thumb-2
-                  .thumb#thumb-3
                 .col-md-5.col-sm-5.col-xs-12#col-detalles
                   h2.module-title PASTAHOGAR PREMIUM
 
@@ -296,7 +304,7 @@ html(lang="en")
                   span#title Contacto
                 .col-md-5.col-sm-12
                   span#telefonos.
-                    (+5411)4755-8410 / 4713-7321
+                    (+5411) 4755-8410 / 4713-7321
                   span#mail.
                     info@hogaris.com.ar
                 .col-md-4.col-sm-12
@@ -335,8 +343,6 @@ html(lang="en")
                           span.glyphicon.glyphicon-menu-down
                         ul.dropdown-menu(aria-labelledby="#dropdown-contacto")
                           li
-                            a#select-rrhh R.R.H.H.
-                          li
                             a#select-ventas Ventas
                           li
                             a#select-informes Informes
@@ -350,7 +356,7 @@ html(lang="en")
                   span#title Servicio Técnico
                 .col-md-4.col-sm-4#paragraph-col
                   p serviciotecnico@hogaris.com.ar
-                  p administracion@hogarios.com.ar
+                  p administracion@hogaris.com.ar
                   p (+5411) 4755-8410 / 4713-7321
                   p info@hogaris.com.ar
                 .col-md-5.col-sm-5
@@ -367,31 +373,34 @@ html(lang="en")
         .row
           .col-md-10.col-md-offset-1
             .row
-              .col-md-4
+              .col-md-4.col-sm-4
                 img#footer-logo(src='src/images/footer-logo.png')
-              .col-md-2
+              .col-md-2.col-sm-2
                 h1 Hogaris
                 a(href='#historia', alt='Historia') Historia
-              .col-md-2
+              .col-md-2.col-sm-2
                 h1 Productos
                 a(href='#', alt='Historia') Pastahogar Familiar
                 a(href='#historia', alt='Historia') Pastahogar Gourmet
                 a(href='#historia', alt='Historia') Pastahogar Premium
                 a(href='#historia', alt='Historia') Accesorio Raviolini
-              .col-md-2
+              .col-md-2.col-sm-2
                 h1 Contacto
                 a(href='#facebook', alt='Historia') Facebook
                 a(href='.form', alt='Historia') Dejanos tu consulta
-              .col-md-2
+                a(href="www.facebook.com/Hogaris")
+                  img(src="src/images/flogo-gr.png")
+              .col-md-2.col-sm-2
                 h1 Servicio Técnico
 
 
             .row#firma
-              .col-md-12.
-                Diseño Web: Agatiello Agencia Creativa
+              .col-md-12
+                a(href="http://www.agatielloagencia.com.ar").
+                  Diseño Web: Agatiello Agencia Creativa
       .scriptVault(style="display: none")
-        script(src="src/paper-full.min.js")
-        script(src="src/paper-core.min.js")
+        - // script(src="src/paper-full.min.js")
+        - // script(src="src/paper-core.min.js")
         script(src="src/jquery-3.1.1.min.js")
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
         script(src="../es6/main.js")

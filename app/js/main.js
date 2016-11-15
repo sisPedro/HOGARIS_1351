@@ -1,7 +1,7 @@
 'use strict';
 
 $(document).ready(function () {
-  console.log('Hello world!');
+  console.log('Agatiello - 2016');
 
   // Product header animation
 
@@ -71,10 +71,6 @@ $(document).ready(function () {
 
   // FORM COLLECT DATA
 
-  $('#select-rrhh').click(function () {
-    $('#input-contacto').html('R.R.H.H');
-  });
-
   $('#select-ventas').click(function () {
     $('#input-contacto').html('Ventas');
   });
@@ -113,6 +109,7 @@ $(document).ready(function () {
         $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Olvidó dirigir su consulta a un contacto. <div>");
     } else {
       $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> ¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
+
         var datos = {
       'nombreYApellido': nombre,
       'email': email,
@@ -125,6 +122,8 @@ $(document).ready(function () {
       'destinatario': destinatario,
       'mensaje': mensaje
     };
+
+
     }
     console.log(datos);
   }
@@ -132,4 +131,12 @@ $(document).ready(function () {
   $('#submit-button').click(function () {
     collectData();
   });
+
+  $('#resp-menu').click(function(){
+    $('#nav-bar').toggleClass('active');
+  })
+
+  $('#menu-productos').click(function(){
+    $('#productos').toggleClass('active')
+  })
 });
