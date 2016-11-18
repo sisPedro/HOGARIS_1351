@@ -94,7 +94,7 @@ html body #main-wrapper #main-col #header .row #nav-bar {
   position: relative;
   z-index: 100;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   html body #main-wrapper #main-col #header .row #nav-bar {
     display: none;
   }
@@ -117,7 +117,6 @@ html body #main-wrapper #main-col #header .row #nav-bar nav ul {
 html body #main-wrapper #main-col #header .row #nav-bar nav ul li {
   display: inline-block;
   width: 25%;
-  height: 10vh;
   transition: background-color 0.2s ease-in-out;
 }
 html body #main-wrapper #main-col #header .row #nav-bar nav ul li:hover {
@@ -126,6 +125,11 @@ html body #main-wrapper #main-col #header .row #nav-bar nav ul li:hover {
 @media screen and (max-width: 480px) {
   html body #main-wrapper #main-col #header .row #nav-bar nav ul li {
     width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  html body #main-wrapper #main-col #header .row #nav-bar nav ul li a {
+    font-size: 1.2em;
   }
 }
 @media screen and (max-width: 480px) {
@@ -147,7 +151,6 @@ html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu {
   border-radius: 0px;
   min-width: 25%;
   width: 100%;
-  height: 24vw;
   padding: 0;
   z-index: 5000;
   border: none;
@@ -161,13 +164,12 @@ html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu {
 html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu .dropdown-item {
   width: 100%;
   display: inline-block;
-  height: 6vw;
   line-height: 6vw;
   text-align: center;
   transition: 0.2s ease-in-out all;
 }
 html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu .dropdown-item:hover {
-  background-color: #3d3d3d;
+  background-color: #b7b7b7;
 }
 @media screen and (max-width: 480px) {
   html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu .dropdown-item {
@@ -536,6 +538,11 @@ html body #main-wrapper #main-col #main .detalles-row #col-detalles #pastaHogarP
   border-bottom: 3px solid #8d9237;
   color: #8d9237;
 }
+html body #main-wrapper #main-col #main .detalles-row #col-detalles #raviolini {
+  color: #e46d35;
+  border-top: 3px solid #e46d35;
+  border-bottom: 3px solid #e46d35;
+}
 html body #main-wrapper #main-col #main .detalles-row #col-detalles p {
   width: 100%;
   font-family: GothamR;
@@ -596,6 +603,9 @@ html body #main-wrapper #main-col #main .row .col-md-9 .endingDivider {
   margin-top: 30px;
   margin-right: 3vw;
   height: 10px;
+}
+html body #main-wrapper #main-col #main .row .col-md-9 #endingRaviolini {
+  background-color: #e46d35;
 }
 html body #main-wrapper #main-col #main .contacto-row {
   margin-top: 40px;

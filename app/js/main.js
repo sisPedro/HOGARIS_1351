@@ -1,7 +1,7 @@
 'use strict';
 
 $(document).ready(function () {
-  console.log('Agatiello - 2016');
+  console.log('Agencia creativa Agatiello - 2016');
 
   // Product header animation
 
@@ -61,14 +61,46 @@ $(document).ready(function () {
 
   // Scrolling from menu
 
-  var historia = $('#historia');
-  var historiaPosition = historia.position();
-  var historiaPositionTop = historiaPosition.top;
+  var mq = window.innerWidth;
 
-  $('#menu-historia').click(function () {
-    $(document).scrollTop(historiaPositionTop);
-  });
+  $('.toHistoria').click(function(){
+      var scroll = $('#historia').position();
+      if (mq <= 480) {
+        $('.toHistoria').attr("href","#historia")
+      } else {
+        $('html,body').animate({
+            scrollTop: scroll.top - 100,
+        }, 800, function(){
+            $('html,body').clearQueue();
+        });
+      }
+  })
 
+  $('.toGourmet').click(function(){
+      var scroll = $('.pastahogarGourmet').position();
+      if (mq <= 480) {
+        $('.toGourmet').attr("href","#pastahogarGourmet")
+      } else {
+        $('html,body').animate({
+            scrollTop: scroll.top,
+        }, 800, function(){
+            $('html,body').clearQueue();
+        });
+      }
+  })
+
+  $('.toRaviolini').click(function(){
+      var scroll = $('.accRaviolini').position();
+      if (mq <= 480) {
+        $('.toRaviolini').attr("href","#accRaviolini")
+      } else {
+        $('html,body').animate({
+            scrollTop: scroll.top,
+        }, 800, function(){
+            $('html,body').clearQueue();
+        });
+      }
+  })
   // FORM COLLECT DATA
 
   $('#select-ventas').click(function () {
@@ -92,16 +124,16 @@ $(document).ready(function () {
   });
 
   function collectData() {
-    var nombre = $('#input-nombre').val();
-    var email = $('#input-email').val();
-    var telefono = $('#input-telefono').val();
-    var direccion = $('#input-direccion').val();
-    var pais = $('#input-pais').val();
-    var provincia = $('#input-provincia').val();
-    var ciudad = $('#input-ciudad').val();
-    var comoNosConocio = $('#dropdown-conocio').html();
-    var destinatario = $('#input-contacto').html();
-    var mensaje = $('#input-consulta').val();
+    let nombre = $('#input-nombre').val();
+    let email = $('#input-email').val();
+    let telefono = $('#input-telefono').val();
+    let direccion = $('#input-direccion').val();
+    let pais = $('#input-pais').val();
+    let provincia = $('#input-provincia').val();
+    let ciudad = $('#input-ciudad').val();
+    let comoNosConocio = $('#dropdown-conocio').html();
+    let destinatario = $('#input-contacto').html();
+    let mensaje = $('#input-consulta').val();
 
     if (nombre == "" || email == "" || telefono == "" || direccion == "" || pais == "" || provincia == "" || ciudad == "") {
       $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Usted no ha completado todos los datos requeridos. <div>");
@@ -110,7 +142,7 @@ $(document).ready(function () {
     } else {
       $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> ¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
 
-        var datos = {
+        let datos = {
       'nombreYApellido': nombre,
       'email': email,
       'telefono': telefono,
@@ -120,7 +152,7 @@ $(document).ready(function () {
       'ciudad': ciudad,
       'comoNosConocio': comoNosConocio,
       'destinatario': destinatario,
-      'mensaje': mensaje
+      'mensaje': mensaje,
     };
 
 

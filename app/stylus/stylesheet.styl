@@ -11,7 +11,7 @@
   font-family GothamRL
   font-style normal
   src url(src/fonts/GothamRounded-Light.otf)
-  
+
 // *
 //   outline solid cyan 1px
 
@@ -78,7 +78,7 @@ html
               padding: 0
               position: relative;
               z-index: 100
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 480px) {
                 display: none
               }
               nav
@@ -95,7 +95,6 @@ html
                   li
                     display: inline-block;
                     width: 25%
-                    height: 10vh
                     transition: background-color 0.2s ease-in-out
                     &:hover
                       background-color: darken($hog-lgray, 30%)
@@ -103,6 +102,9 @@ html
                       width 100%
                     }
                     a
+                      @media screen and (max-width: 768px) {
+                        font-size 1.2em
+                      }
                       @media screen and (max-width: 480px) {
                         font-size 2em
                         line-height 1em
@@ -118,7 +120,6 @@ html
                       border-radius: 0px
                       min-width: 25%
                       width: 100%
-                      height: 6vw * 4
                       padding: 0
                       z-index: 5000
                       border: none
@@ -130,12 +131,11 @@ html
                       .dropdown-item
                         width: 100%
                         display: inline-block;
-                        height: 6vw
                         line-height: 6vw
                         text-align: center;
                         transition: 0.2s ease-in-out all
                         &:hover
-                          background-color: darken($hog-lgray, 70%)
+                          background-color darken($hog-lgray, 10%)
                         @media screen and (max-width: 480px) {
                           height auto
                           margin-bottom 30px
@@ -412,6 +412,10 @@ html
                 border-top: 3px solid $hog-olive
                 border-bottom: 3px solid $hog-olive
                 color: $hog-olive
+              #raviolini
+                color $hog-orange
+                border-top: 3px solid $hog-orange
+                border-bottom: 3px solid $hog-orange
               p
                 width: 100%
                 font-family: GothamR
@@ -463,6 +467,8 @@ html
                 margin-top 30px
                 margin-right 3vw
                 height 10px
+              #endingRaviolini
+                background-color $hog-orange
           .contacto-row
             margin-top 40px
             #contacto

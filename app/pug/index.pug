@@ -20,7 +20,7 @@ html(lang="en")
       )
 
   body
-    .container-fluid
+    .container-fluid(style="padding: 0 0 0 15px")
       .row#main-wrapper
         .col-md-10.col-md-offset-1.col-sm-12#main-col
           //- HEADER
@@ -38,18 +38,14 @@ html(lang="en")
                 nav.navbar.navbar-default
                   ul.nav.navbar-nav
                     li.menu-item-header
-                      a#menu-historia(href="#historia") Historia
+                      a.toHistoria#menu-historia Historia
                     li.menu-item-header
                       a#menu-productos(href="#") Productos
                       .dropdown-menu#productos
                           span.dropdown-item
-                            a(href="#") Linea PASTAHOGAR
+                            a.toFamiliar Linea PASTAHOGAR
                           span.dropdown-item
-                            a(href="#") Producto 2
-                          span.dropdown-item
-                            a(href="#") Producto 3
-                          span.dropdown-item
-                            a(href="#") Producto 4
+                            a.toRaviolini Accesorio RAVIOLINI
                     li.menu-item-header
                       a(href="#contacto") Contacto
                     li.menu-item-header
@@ -59,17 +55,23 @@ html(lang="en")
               //- DAMERO
               .row#tile-row
                 .col-md-12.col-xs-12#tile-box
-                  .tile.lt#r1t1
-                    span PASTAHOGAR GOURMET
-                  .tile#r1t2
-                  .tile#r1t3
-                    span NUESTRA HISTORIA
+                  a.toGourmet
+                    .tile.lt#r1t1
+                      span PASTAHOGAR GOURMET
+                  a.toGourmet
+                    .tile#r1t2
+                  a.toHistoria
+                    .tile#r1t3
+                      span NUESTRA HISTORIA
                   .tile.rt#r1t4
                     span PROMOCIÓN
 
-                  .tile.lt#r2t1
-                  .tile#r2t2
-                    span ACCESORIO RAVIOLINI
+
+                  a.toRaviolini
+                    .tile.lt#r2t1
+                  a.toRaviolini
+                    .tile#r2t2
+                      span ACCESORIO RAVIOLINI
                   .tile#r2t3
                   .tile.rt#r2t4
                     span PASTAHOGAR FAMILIAR
@@ -101,18 +103,18 @@ html(lang="en")
                 .col-md-9.col-sm-9
                   .header#product-header
                     .menu-item#familiar FAMILIAR
-                    .menu-item#gourmet GOURMET
+                    .menu-item.toGourmet#gourmet GOURMET
                     .menu-item#premium PREMIUM
-                    .menu-item#raviolini RAVIOLINI
+                    .menu-item.toRaviolini#raviolini RAVIOLINI
                     hr
                     .menu-decoration
                       .menu-circle#c-familiar
                     .menu-decoration
-                      .menu-circle#c-gourmet
+                      .menu-circle.toGourmet#c-gourmet
                     .menu-decoration
                       .menu-circle#c-premium
                     .menu-decoration
-                      .menu-circle#c-raviolini
+                      .menu-circle.toRaviolini#c-raviolini
               //- FAMILIAR
               .row.detalles-row
                 .col-md-5.col-md-offset-2.col-sm-5.col-sm-offset-2.col-xs-12.col-xs-offset-0
@@ -182,11 +184,11 @@ html(lang="en")
                   .thumb#thumb-1
                   .thumb#thumb-2
                   .thumb#thumb-3
-                .col-md-5.col-sm-5.col-xs-12#col-detalles
+                .col-md-5.col-sm-5.col-xs-12.pastahogarGourmet#col-detalles
                   h2.module-title PASTAHOGAR GOURMET
 
                   .module-subtitle-container
-                    h3.module-subtitle#pastaHogarGourmet FABRICADORA DE PASTAS
+                    h3.module-subtitle#pastahogarGourmet FABRICADORA DE PASTAS
                   p.
                     La PASTAHOGAR GOURMET de Hogaris es la fabricadora de pastas ideal para cocinas con singular estilo. Representa la renovación de un equipo tradicional, con diseño exclusivo y moderna síntesis en sus líneas.
                   p.
@@ -297,7 +299,24 @@ html(lang="en")
                         No necesita lubriación para el mantenimiento
               .row
                 .col-md-9.col-md-offset-3
-                  .endingDivider
+                  .premiumDivider
+
+              //- RAVIOLINI
+              .row.detalles-row.accRaviolini#accRaviolini
+                .col-md-5.col-md-offset-2.col-sm-5.col-sm-offset-2
+                  img#raviolini-pic(src='https://s21.postimg.org/r7sfa8paf/image.png', style="width: 100%")
+                .col-md-5.col-sm-5.col-xs-12#col-detalles
+                  h2.module-title ACCESORIO RAVIOLINI
+
+                  .module-subtitle-container
+                    h3.module-subtitle#raviolini FABRICADORA DE PASTAS
+                  p.
+                    El ACCESORIO RAVIOLINI de HOGARIS es el complemento ideal para quienes disfrutan del inigualable sabor de las pastas caseras. Se acopla firme y fácilmente en la parte posterior de su PASTAHOGAR. Con un sencillo aplique en la parte posterior de su PASTAHOGAR, usted podrá fabricar rápidamente deliciosas planchas de ravioles rellenos.I® CLÁSICO*
+                  p(style="font-size: 0.8em; margin-top: 30px").
+                    *Apto para PastaHogar Familiar y Premium.
+              .row
+                .col-md-9.col-md-offset-3
+                  .endingDivider#endingRaviolini
               //- CONTACTO
               .row.contacto-row
                 .col-md-3.col-sm-3#contacto
@@ -377,7 +396,7 @@ html(lang="en")
                 img#footer-logo(src='src/images/footer-logo.png')
               .col-md-2.col-sm-2
                 h1 Hogaris
-                a(href='#historia', alt='Historia') Historia
+                a.toHistoria Historia
               .col-md-2.col-sm-2
                 h1 Productos
                 a(href='#', alt='Historia') Pastahogar Familiar
