@@ -1,8 +1,6 @@
 <?php
-$casa = getenv('HOME');
-echo $casa;
 $datos = $_POST['datos'];
-$myfile = fopen(${HOME}."Registro.csv", "a") or die("Unable to open file!");
+$myfile = fopen("Registro.csv", "a") or die("Unable to open file!");
 fwrite($myfile, $datos["nombreYApellido"]);
 fwrite($myfile, ",");
 fwrite($myfile, $datos["email"]);
