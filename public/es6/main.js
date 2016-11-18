@@ -200,6 +200,10 @@ $(document).ready(function () {
     $('#dropdown-conocio').html('Recomendación Personal');
   });
 
+  function post(datos) {
+    $.post('write.php', { datos: datos }, function () {});
+  }
+
   function collectData() {
     var nombre = $('#input-nombre').val();
     var email = $('#input-email').val();
@@ -219,7 +223,7 @@ $(document).ready(function () {
     } else {
       $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> ¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
 
-      var _datos = {
+      var datos = {
         'nombreYApellido': nombre,
         'email': email,
         'telefono': telefono,
@@ -231,8 +235,8 @@ $(document).ready(function () {
         'destinatario': destinatario,
         'mensaje': mensaje
       };
+      post(datos);
     }
-    console.log(datos);
   }
 
   $('#submit-button').click(function () {

@@ -201,6 +201,12 @@ $(document).ready(function () {
     $('#dropdown-conocio').html('Recomendación Personal');
   });
 
+  function post(datos) {
+     $.post('write.php',{datos:datos},
+     function(){
+     });
+   }
+
   function collectData() {
     let nombre = $('#input-nombre').val();
     let email = $('#input-email').val();
@@ -232,10 +238,8 @@ $(document).ready(function () {
       'destinatario': destinatario,
       'mensaje': mensaje,
     };
-
-
+    post(datos);
     }
-    console.log(datos);
   }
 
   $('#submit-button').click(function () {
