@@ -785,6 +785,7 @@ html body #footer a {
   font-size: 15px;
   display: block;
   cursor: pointer;
+  font-family: GothamR;
 }
 html body #footer a:hover {
   color: #292929;
@@ -802,4 +803,5 @@ html body #footer #firma {
   margin-top: 30px;
   margin-left: 10px;
   margin-bottom: 20px;
+  font-family: GothamR;
 }
