@@ -493,7 +493,7 @@ html body #main-wrapper #main-col #main .detalles-row .thumb:hover {
   transform: translateY(-10px);
 }
 html body #main-wrapper #main-col #main .detalles-row #thumb-1 {
-  background-image: url("src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png");
+  background-image: url("src/images/160701_Hog_Pastahogar_-FAMILIAR_amarilla.png");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -511,7 +511,7 @@ html body #main-wrapper #main-col #main .detalles-row #thumb-3 {
   background-repeat: no-repeat;
 }
 html body #main-wrapper #main-col #main .detalles-row #thumbG-1 {
-  background-image: url("src/images/160701_Hog_Pastahogar_-GOURMET_dorada.png");
+  background-image: url("src/images/160701_Hog_Pastahogar_GOURMET-verde.png");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;

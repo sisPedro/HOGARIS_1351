@@ -47,6 +47,12 @@ $(document).ready(function () {
 
   // Thumbnail replacement
 
+  $('#thumb-1').hover(function () {
+    $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_amarilla.png');
+  }, function () {
+    $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png');
+  });
+
   $('#thumb-2').hover(function () {
     $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_naranja.png');
   }, function () {
@@ -57,6 +63,12 @@ $(document).ready(function () {
     $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_verde.png');
   }, function () {
     $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png');
+  });
+
+  $('#thumbG-1').hover(function () {
+    $('#gourmet-pic').attr('src', 'src/images/160701_Hog_Pastahogar_GOURMET-verde.png');
+  }, function () {
+    $('#gourmet-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-GOURMET_dorada.png');
   });
 
   $('#thumbG-2').hover(function () {
