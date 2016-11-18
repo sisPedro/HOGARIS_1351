@@ -118,6 +118,7 @@ html body #main-wrapper #main-col #header .row #nav-bar nav ul li {
   display: inline-block;
   width: 25%;
   transition: background-color 0.2s ease-in-out;
+  vertical-align: top;
 }
 html body #main-wrapper #main-col #header .row #nav-bar nav ul li:hover {
   background-color: #8e8e8e;
