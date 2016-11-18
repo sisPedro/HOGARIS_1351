@@ -47,9 +47,9 @@ html(lang="en")
                           span.dropdown-item
                             a.toRaviolini Accesorio RAVIOLINI
                     li.menu-item-header
-                      a(href="#contacto") Contacto
+                      a.toContacto Contacto
                     li.menu-item-header
-                      a(href="#serv-tec") Servicio Técnico
+                      a.toServTec Servicio Técnico
           main#main
             .container-fluid
               //- DAMERO
@@ -72,15 +72,20 @@ html(lang="en")
                   a.toRaviolini
                     .tile#r2t2
                       span ACCESORIO RAVIOLINI
-                  .tile#r2t3
-                  .tile.rt#r2t4
-                    span PASTAHOGAR FAMILIAR
-
-                  .tile.lt#r3t1
-                    span CONTACTO SERVICIO
-                  .tile#r3t2
-                  .tile#r3t3
-                    span PASTAHOGAR PREMIUM
+                  a.toFamiliar
+                    .tile#r2t3
+                  a.toFamiliar
+                    .tile.rt#r2t4
+                      span PASTAHOGAR FAMILIAR
+                    
+                  a.toContacto
+                    .tile.lt#r3t1
+                      span CONTACTO SERVICIO
+                  a.toPremium
+                    .tile#r3t2
+                  a.toPremium
+                    .tile#r3t3
+                      span PASTAHOGAR PREMIUM
                   .tile.rt#r3t4
                     a(href="http://www.facebook.com/Hogaris")
                       img(src="src/images/flogo-wh.png")
@@ -116,7 +121,7 @@ html(lang="en")
                     .menu-decoration
                       .menu-circle.toRaviolini#c-raviolini
               //- FAMILIAR
-              .row.detalles-row
+              .row.detalles-row#familiarScroll
                 .col-md-5.col-md-offset-2.col-sm-5.col-sm-offset-2.col-xs-12.col-xs-offset-0
                   img#familiar-pic(src='src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png')
                   .thumb#thumb-1
@@ -180,10 +185,10 @@ html(lang="en")
               //- GOURMET
               .row.detalles-row
                 .col-md-5.col-md-offset-2.col-sm-5.col-sm-offset-2.col-xs-12
-                  img#familiar-pic(src='src/images/160701_Hog_Pastahogar_-GOURMET_dorada.png')
-                  .thumb#thumb-1
-                  .thumb#thumb-2
-                  .thumb#thumb-3
+                  img#gourmet-pic(src='src/images/160701_Hog_Pastahogar_-GOURMET_dorada.png')
+                  .thumb#thumbG-1
+                  .thumb#thumbG-2
+                  .thumb#thumbG-3
                 .col-md-5.col-sm-5.col-xs-12.pastahogarGourmet#col-detalles
                   h2.module-title PASTAHOGAR GOURMET
 
@@ -241,7 +246,7 @@ html(lang="en")
                 .col-md-9.col-md-offset-3
                   .premiumDivider
               //- PREMIUM
-              .row.detalles-row
+              .row.detalles-row#pastahogarPremium
                 .col-md-5.col-md-offset-2.col-sm-5.col-sm-offset-2
                   img#familiar-pic(src='src/images/160701_Hog_Pastahogar_-PREMIUM_vistafrente.png', style="width: 100%")
                 .col-md-5.col-sm-5.col-xs-12#col-detalles
@@ -299,7 +304,7 @@ html(lang="en")
                         No necesita lubriación para el mantenimiento
               .row
                 .col-md-9.col-md-offset-3
-                  .premiumDivider
+                  .endingRaviolini
 
               //- RAVIOLINI
               .row.detalles-row.accRaviolini#accRaviolini
@@ -316,9 +321,9 @@ html(lang="en")
                     *Apto para PastaHogar Familiar y Premium.
               .row
                 .col-md-9.col-md-offset-3
-                  .endingDivider#endingRaviolini
+                  .endingProductos
               //- CONTACTO
-              .row.contacto-row
+              .row.contacto-row#contactoScroll
                 .col-md-3.col-sm-3#contacto
                   span#title Contacto
                 .col-md-5.col-sm-12
@@ -399,15 +404,14 @@ html(lang="en")
                 a.toHistoria Historia
               .col-md-2.col-sm-2
                 h1 Productos
-                a(href='#', alt='Historia') Pastahogar Familiar
-                a(href='#historia', alt='Historia') Pastahogar Gourmet
-                a(href='#historia', alt='Historia') Pastahogar Premium
-                a(href='#historia', alt='Historia') Accesorio Raviolini
+                a.toFamiliar Pastahogar Familiar
+                a.toGourmet Pastahogar Gourmet
+                a.toPremium Pastahogar Premium
+                a.toRaviolini Accesorio Raviolini
               .col-md-2.col-sm-2
                 h1 Contacto
-                a(href='#facebook', alt='Historia') Facebook
-                a(href='.form', alt='Historia') Dejanos tu consulta
-                a(href="www.facebook.com/Hogaris")
+                a.toContacto Dejanos tu consulta
+                a(href="http://www.facebook.com/Hogaris", title="Visitá nuestro Facebook!")
                   img(src="src/images/flogo-gr.png")
               .col-md-2.col-sm-2
                 h1 Servicio Técnico

@@ -127,6 +127,7 @@ html
                       @media screen and (max-width: 480px) {
                         width 100%
                         height auto
+                        background-color darken($hog-lgray, 10%)
                       }
 
                       .dropdown-item
@@ -139,14 +140,14 @@ html
                           background-color darken($hog-lgray, 10%)
                         @media screen and (max-width: 480px) {
                           height auto
-                          margin-bottom 30px
+                          margin 20px 0
                         }
                         a
                           text-decoration: none
                           @media screen and (max-width: 480px) {
                             line-height 1.3em
-                            margin 15px 0px
                             font-size 2em
+                            margin 20px 0
                           }
                     .menu-item-header:hover .dropdown-menu
                         display: block
@@ -389,6 +390,21 @@ html
               background-size: cover;
               background-position: bottom;
               background-repeat: no-repeat;
+            #thumbG-1
+              background-image: url('src/images/160701_Hog_Pastahogar_-GOURMET_dorada.png')
+              background-size: cover;
+              background-position: bottom;
+              background-repeat: no-repeat;
+            #thumbG-2
+              background-image: url('src/images/160701_Hog_Pastahogar_-GOURMET_rosa.png')
+              background-size: cover;
+              background-position: bottom;
+              background-repeat: no-repeat;
+            #thumbG-3
+              background-image: url('src/images/160701_Hog_Pastahogar_-GOURMET_coral.png')
+              background-size: cover;
+              background-position: bottom;
+              background-repeat: no-repeat;
             #col-detalles
               padding-right: 5vw
               h2
@@ -405,7 +421,7 @@ html
                 border-bottom: 3px solid $hog-yellow
                 line-height: 1.6em
                 font-size: 1.2em
-              #pastaHogarGourmet
+              #pastahogarGourmet
                 border-top: 3px solid $hog-gray
                 border-bottom: 3px solid $hog-gray
                 color: $hog-gray
@@ -459,7 +475,7 @@ html
                 height 10px
                 background-color $hog-gray
               .premiumDivider
-                background-color $hog-yellow
+                background-color $hog-olive
                 margin-top 30px
                 margin-right 3vw
                 height 10px
@@ -468,8 +484,16 @@ html
                 margin-top 30px
                 margin-right 3vw
                 height 10px
-              #endingRaviolini
+              .endingRaviolini
                 background-color $hog-orange
+                margin-top 30px
+                margin-right 3vw
+                height 10px
+              .endingProductos
+                background-color $hog-gray
+                margin-top 30px
+                margin-right 3vw
+                height 10px
           .contacto-row
             margin-top 40px
             #contacto
@@ -583,6 +607,7 @@ html
         color darken($hog-lgray, 30%)
         font-size 15px
         display block
+        cursor pointer
         &:hover
           color darken($hog-lgray, 80%)
       img

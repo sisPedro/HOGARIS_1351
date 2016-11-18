@@ -59,6 +59,18 @@ $(document).ready(function () {
     $('#familiar-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-FAMILIAR_vistafrente.png');
   });
 
+  $('#thumbG-2').hover(function () {
+    $('#gourmet-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-GOURMET_rosa.png');
+  }, function () {
+    $('#gourmet-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-GOURMET_dorada.png');
+  });
+
+  $('#thumbG-3').hover(function () {
+    $('#gourmet-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-GOURMET_coral.png');
+  }, function () {
+    $('#gourmet-pic').attr('src', 'src/images/160701_Hog_Pastahogar_-GOURMET_dorada.png');
+  });
+
   // Scrolling from menu
 
   var mq = window.innerWidth;
@@ -101,6 +113,59 @@ $(document).ready(function () {
       });
     }
   });
+
+  $('.toPremium').click(function () {
+    var scroll = $('#pastahogarPremium').position();
+    if (mq <= 480) {
+      $('.toPremium').attr('href', '#pastahogarPremium');
+    } else {
+      $('html,body').animate({
+        scrollTop: scroll.top
+      }, 800, function () {
+        $('html,body').clearQueue();
+      });
+    }
+  });
+
+  $('.toContacto').click(function () {
+    var scroll = $('#contactoScroll').position();
+    if (mq <= 480) {
+      $('.toContacto').attr('href', '#contactoScroll');
+    } else {
+      $('html,body').animate({
+        scrollTop: scroll.top
+      }, 800, function () {
+        $('html,body').clearQueue();
+      });
+    }
+  });
+
+  $('.toFamiliar').click(function () {
+    var scroll = $('#familiarScroll').position();
+    if (mq <= 480) {
+      $('.toFamiliar').attr('href', '#familiarScroll');
+    } else {
+      $('html,body').animate({
+        scrollTop: scroll.top
+      }, 800, function () {
+        $('html,body').clearQueue();
+      });
+    }
+  });
+
+  $('.toServTec').click(function () {
+    var scroll = $('#serv-tec').position();
+    if (mq <= 480) {
+      $('.toServTec').attr('href', '#serv-tec');
+    } else {
+      $('html,body').animate({
+        scrollTop: scroll.top
+      }, 800, function () {
+        $('html,body').clearQueue();
+      });
+    }
+  });
+
   // FORM COLLECT DATA
 
   $('#select-ventas').click(function () {

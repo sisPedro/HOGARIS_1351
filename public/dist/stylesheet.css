@@ -160,6 +160,7 @@ html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu {
   html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu {
     width: 100%;
     height: auto;
+    background-color: #b7b7b7;
   }
 }
 html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu .dropdown-item {
@@ -175,7 +176,7 @@ html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu .d
 @media screen and (max-width: 480px) {
   html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu .dropdown-item {
     height: auto;
-    margin-bottom: 30px;
+    margin: 20px 0;
   }
 }
 html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu .dropdown-item a {
@@ -184,8 +185,8 @@ html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu .d
 @media screen and (max-width: 480px) {
   html body #main-wrapper #main-col #header .row #nav-bar nav ul .dropdown-menu .dropdown-item a {
     line-height: 1.3em;
-    margin: 15px 0px;
     font-size: 2em;
+    margin: 20px 0;
   }
 }
 html body #main-wrapper #main-col #header .row #nav-bar nav ul .menu-item-header:hover .dropdown-menu {
@@ -509,6 +510,24 @@ html body #main-wrapper #main-col #main .detalles-row #thumb-3 {
   background-position: bottom;
   background-repeat: no-repeat;
 }
+html body #main-wrapper #main-col #main .detalles-row #thumbG-1 {
+  background-image: url("src/images/160701_Hog_Pastahogar_-GOURMET_dorada.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+html body #main-wrapper #main-col #main .detalles-row #thumbG-2 {
+  background-image: url("src/images/160701_Hog_Pastahogar_-GOURMET_rosa.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+html body #main-wrapper #main-col #main .detalles-row #thumbG-3 {
+  background-image: url("src/images/160701_Hog_Pastahogar_-GOURMET_coral.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
 html body #main-wrapper #main-col #main .detalles-row #col-detalles {
   padding-right: 5vw;
 }
@@ -529,7 +548,7 @@ html body #main-wrapper #main-col #main .detalles-row #col-detalles h3 {
   line-height: 1.6em;
   font-size: 1.2em;
 }
-html body #main-wrapper #main-col #main .detalles-row #col-detalles #pastaHogarGourmet {
+html body #main-wrapper #main-col #main .detalles-row #col-detalles #pastahogarGourmet {
   border-top: 3px solid #8fa3a3;
   border-bottom: 3px solid #8fa3a3;
   color: #8fa3a3;
@@ -594,7 +613,7 @@ html body #main-wrapper #main-col #main .row .col-md-9 .gourmetDivider {
   background-color: #8fa3a3;
 }
 html body #main-wrapper #main-col #main .row .col-md-9 .premiumDivider {
-  background-color: #c79100;
+  background-color: #8d9237;
   margin-top: 30px;
   margin-right: 3vw;
   height: 10px;
@@ -605,8 +624,17 @@ html body #main-wrapper #main-col #main .row .col-md-9 .endingDivider {
   margin-right: 3vw;
   height: 10px;
 }
-html body #main-wrapper #main-col #main .row .col-md-9 #endingRaviolini {
+html body #main-wrapper #main-col #main .row .col-md-9 .endingRaviolini {
   background-color: #e46d35;
+  margin-top: 30px;
+  margin-right: 3vw;
+  height: 10px;
+}
+html body #main-wrapper #main-col #main .row .col-md-9 .endingProductos {
+  background-color: #8fa3a3;
+  margin-top: 30px;
+  margin-right: 3vw;
+  height: 10px;
 }
 html body #main-wrapper #main-col #main .contacto-row {
   margin-top: 40px;
@@ -756,6 +784,7 @@ html body #footer a {
   color: #8e8e8e;
   font-size: 15px;
   display: block;
+  cursor: pointer;
 }
 html body #footer a:hover {
   color: #292929;
