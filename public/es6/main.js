@@ -1,5 +1,5 @@
 'use strict';
-
+var flagData=true;
 $(document).ready(function () {
   console.log('Agencia creativa Agatiello - 2016');
 
@@ -200,14 +200,13 @@ $(document).ready(function () {
     $('#dropdown-conocio').html('Recomendación Personal');
   });
 
-  var flagData = true;
 
   function post(datos) {
     $.post('write.php', { datos: datos }, function () {});
   }
 
   function collectData(flagData) {
-
+    if(flagData){
     var nombre = $('#input-nombre').val();
     var email = $('#input-email').val();
     var telefono = $('#input-telefono').val();
@@ -239,15 +238,14 @@ $(document).ready(function () {
         'mensaje': mensaje
       };
 
-      if (flagData) {
-        post(datos);
-        flagData = false;
+      post(datos);
       }
     }
   }
 
   $('#submit-button').click(function () {
     collectData(flagData);
+    flagData = false;
   });
 
   $('#resp-menu').click(function () {
