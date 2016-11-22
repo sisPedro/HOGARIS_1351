@@ -200,11 +200,14 @@ $(document).ready(function () {
     $('#dropdown-conocio').html('Recomendación Personal');
   });
 
+  var flagData = true;
+
   function post(datos) {
     $.post('write.php', { datos: datos }, function () {});
   }
 
-  function collectData() {
+  function collectData(flagData) {
+
     var nombre = $('#input-nombre').val();
     var email = $('#input-email').val();
     var telefono = $('#input-telefono').val();
@@ -235,12 +238,16 @@ $(document).ready(function () {
         'destinatario': destinatario,
         'mensaje': mensaje
       };
-      post(datos);
+
+      if (flagData) {
+        post(datos);
+        flagData = false;
+      }
     }
   }
 
   $('#submit-button').click(function () {
-    collectData();
+    collectData(flagData);
   });
 
   $('#resp-menu').click(function () {

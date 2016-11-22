@@ -201,13 +201,16 @@ $(document).ready(function () {
     $('#dropdown-conocio').html('Recomendación Personal');
   });
 
+  let flagData = true;
+
   function post(datos) {
      $.post('write.php',{datos:datos},
      function(){
      });
    }
 
-  function collectData() {
+  function collectData(flagData) {
+
     let nombre = $('#input-nombre').val();
     let email = $('#input-email').val();
     let telefono = $('#input-telefono').val();
@@ -219,11 +222,13 @@ $(document).ready(function () {
     let destinatario = $('#input-contacto').html();
     let mensaje = $('#input-consulta').val();
 
-    if (nombre == "" || email == "" || telefono == "" || direccion == "" || pais == "" || provincia == "" || ciudad == "") {
+    if (nombre == "" || email == "" || telefono == "" || direccion == "" || pais == "" || provincia == "" || ciudad == "")
+    {
       $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Usted no ha completado todos los datos requeridos. <div>");
-    } else if ( destinatario =="Contacto<span class='glyphicon glyphicon-menu-down'></span>") {
+    } else if ( destinatario == "Contacto<span class='glyphicon glyphicon-menu-down'></span>") {
         $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Olvidó dirigir su consulta a un contacto. <div>");
-    } else {
+    } else
+    {
       $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> ¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
 
         let datos = {
@@ -238,12 +243,18 @@ $(document).ready(function () {
       'destinatario': destinatario,
       'mensaje': mensaje,
     };
-    post(datos);
+
+    if(flagData)
+    {
+      post(datos);
+      flagData = false;
+    }
+
     }
   }
 
   $('#submit-button').click(function () {
-    collectData();
+    collectData(flagData);
   });
 
   $('#resp-menu').click(function(){
