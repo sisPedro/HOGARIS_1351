@@ -199,7 +199,11 @@ $(document).ready(function () {
   $('#select-recomendacionPersonal').click(function () {
     $('#dropdown-conocio').html('Recomendación Personal');
   });
-
+  
+  function setFlagData(flagData)
+  {
+    flagData = false;
+  }
 
   function post(datos) {
     $.post('write.php', { datos: datos }, function () {});
@@ -224,7 +228,7 @@ $(document).ready(function () {
       $('#col-consulta').append("<div class='alert alert-danger alerta-consulta' role='alert'> <strong> Revise los datos </strong> Olvidó dirigir su consulta a un contacto. <div>");
     } else {
       $('#col-consulta').append("<div class='alert alert-success alerta-consulta' role='alert'> <strong> ¡Gracias! </strong> Hemos recibido su mensaje. Nos estaremos contactando con usted a la brevedad. <div>");
-
+      setFlagData(flagData);
       var datos = {
         'nombreYApellido': nombre,
         'email': email,
@@ -245,7 +249,7 @@ $(document).ready(function () {
 
   $('#submit-button').click(function () {
     collectData(flagData);
-    flagData = false;
+    
   });
 
   $('#resp-menu').click(function () {
